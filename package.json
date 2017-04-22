@@ -1,1 +1,38 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-webpack-livereload-plugin",     "homepage": "https://github.com/npmdoc/node-npmdoc-webpack-livereload-plugin",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-webpack-livereload-plugin.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  [webpack-livereload-plugin (v0.11.0)](https://github.com/statianzo/webpack-livereload-plugin#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-webpack-livereload-plugin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-webpack-livereload-plugin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-webpack-livereload-plugin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-webpack-livereload-plugin)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-webpack-livereload-plugin",
+    "keywords": [
+        "documentation",
+        "webpack-livereload-plugin"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_webpack_livereload_plugin.js",
+    "name": "npmdoc-webpack-livereload-plugin",
+    "nameAlias": "npmdoc_webpack_livereload_plugin",
+    "nameOriginal": "npmdoc-webpack-livereload-plugin",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-webpack-livereload-plugin.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
